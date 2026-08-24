@@ -70,14 +70,14 @@ trait Eloquence
     /**
      * Extract real name and alias from the sql select clause.
      *
-     * @param  string $column
+     * @param  mixed $column
      * @return array
      */
     protected function extractColumnAlias($column)
     {
         $alias = $column;
 
-        if (strpos($column, ' as ') !== false) {
+        if (is_string($column) && strpos($column, ' as ') !== false) {
             list($column, $alias) = explode(' as ', $column);
         }
 
