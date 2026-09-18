@@ -16,7 +16,7 @@ class JoinerFactory implements FactoryContract
      * @param Model $model
      * @return Joiner
      */
-    public static function make($query, Model $model = null)
+    public static function make($query, ?Model $model = null)
     {
         if ($query instanceof EloquentBuilder) {
             $model = $query->getModel();

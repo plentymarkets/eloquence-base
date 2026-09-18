@@ -13,5 +13,5 @@ interface JoinerFactory
      * @param  Builder $query
      * @return Joiner
      */
-    public static function make($query, Model $model = null);
+    public static function make($query, ?Model $model = null);
 }
